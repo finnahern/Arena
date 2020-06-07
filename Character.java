@@ -4,11 +4,6 @@ class Character{
 	private String name;
 	private int hp;
 	private int dmg;
-	
-	//Default Constructor
-	public Character(){
-		
-	}
 
 	//ID Getter/Setter
 	public int getID(){
@@ -54,4 +49,3 @@ class Character{
 		this.dmg = dmg;
 	}
 }	
-	
