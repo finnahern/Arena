@@ -4,6 +4,8 @@ class Character{
 	private String name;
 	private int hp;
 	private int dmg;
+	private int mod;
+	private int ac;
 
 	//ID Getter/Setter
 	public int getID(){
@@ -47,5 +49,27 @@ class Character{
 	public void setDMG(int dmg){
 		
 		this.dmg = dmg;
+	}
+	
+	//Attack mod Getter/Setter
+	public int getMod(){
+		
+		return mod;
+	}
+	
+	public void setMod(int mod){
+		
+		this.mod = mod;
+	}
+	
+	//AC Getter/Setter
+	public int getAC(){
+		
+		return ac;
+	}
+	
+	public void setAC(int ac){
+		
+		this.ac = ac;
 	}
 }	

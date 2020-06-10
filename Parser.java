@@ -19,7 +19,7 @@ public class Parser{
 		
 		Character character = new Character();
 		
-		String[] dataArray = new String[4];
+		String[] dataArray = new String[6];
 		int subZero = 0;
 		int arrayCounter = 0;
 		
@@ -43,6 +43,8 @@ public class Parser{
 		character.setName(dataArray[1]);
 		character.setHP(Integer.parseInt(dataArray[2]));
 		character.setDMG(Integer.parseInt(dataArray[3]));
+		character.setMod(Integer.parseInt(dataArray[4]));
+		character.setAC(Integer.parseInt(dataArray[5]));
 		
 		return character;
 	}

@@ -8,7 +8,7 @@ public class DataManager{
 	public ArrayList<String> readData(String fileName){
 		
 		ArrayList<String> characterData = new ArrayList<String>();
-			
+	
 		try{
 		
 			File data = new File(fileName);
