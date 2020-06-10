@@ -84,8 +84,6 @@ public class Arena{
 		int mod1 = fighter1.getMod();
 		int ac1 = fighter1.getAC();
 		
-		System.out.println(name1 + " " +  mod1 + " " + ac1);
-		
 		//Fighter 2
 		String name2 = fighter2.getName();
 		int hp2 = fighter2.getHP();
@@ -93,28 +91,25 @@ public class Arena{
 		int mod2 = fighter2.getMod();
 		int ac2 = fighter2.getAC();
 		
-		System.out.println(name2 + " " +  mod2 + " " + ac2);
-		
 		//Combat Loop
 		while(hp2 > 0 && hp1 > 0){
 			
 			//Fighter 1 attack
 			
 			int roll1 = roll() + mod1;
-			System.out.println(roll1);
 			
 			if(roll1 >= ac2){
 			
 				hp2 = hp2 - dmg1;
-				System.out.println(name1 + " rolled a " + roll1 + ". It hits!");
+				System.out.println(name1 + " rolled " + roll1 + ". It hits!");
 				System.out.println(name1 + " deals " + dmg1 + " damage. " + name2 + "'s HP is " + hp2);
 				System.out.println("");
 			
 			}else{
 			
 				System.out.println(name1 + " rolled a " + roll1 + ". It missed!");
+				System.out.println("");
 			}
-			System.out.println(roll1);
 			
 			if(hp2 <= 0){
 				
@@ -129,13 +124,14 @@ public class Arena{
 			if(roll2 >= ac1){
 				
 				hp1 = hp1 - dmg2;
-				System.out.println(name2 + " rolled a " + roll2 + ". It hits!");
+				System.out.println(name2 + " rolled " + roll2 + ". It hits!");
 				System.out.println(name2 + " deals " + dmg2 + " damage. " + name1 + "'s HP is " + hp1);
 				System.out.println("");
 				
 			}else{
 				
-				System.out.println(name1 + " rolled a " + roll1 + ". It missed!");
+				System.out.println(name2 + " rolled a " + roll2 + ". It missed!");
+				System.out.println("");
 			}
 			
 			if(hp1 <= 0){
