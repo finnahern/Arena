@@ -1,6 +1,6 @@
 package arena.model;
 
-class Character{
+public class Character{
 	
 	private int id;
 	private String name;

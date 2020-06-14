@@ -12,7 +12,7 @@ public class Arena{
 	public void arena(){
 		
 		Parser parser = new Parser();
-		String fileName = "data.txt";
+		String fileName = "res/data.txt";
 	
 		ArrayList<String> characterData = DataManager.readData(fileName);
 		ArrayList<Character> characters = parser.init(characterData);

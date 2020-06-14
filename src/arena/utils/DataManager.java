@@ -28,8 +28,9 @@ public class DataManager{
 		
 		} catch (FileNotFoundException e){
 		
-			System.out.println("An error occured.");
 			e.printStackTrace();
+			System.out.println("An error occured.");
+			System.exit(1);
 		}	
 		
 		return characterData;
@@ -39,7 +40,7 @@ public class DataManager{
 		
         try {
 			
-			String fileName = "output.txt";
+			String fileName = "res/output.txt";
 			
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName, true));
             bufferedWriter.write(result);
@@ -51,6 +52,7 @@ public class DataManager{
             
 			System.out.println("An error occurred.");
             e.printStackTrace();
+			System.exit(1);
         }
     }
 }
