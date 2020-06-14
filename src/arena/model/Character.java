@@ -1,3 +1,5 @@
+package arena.model;
+
 class Character{
 	
 	private int id;

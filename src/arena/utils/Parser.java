@@ -1,4 +1,7 @@
+package arena.utils;
+
 import java.util.ArrayList;
+import arena.model.Character;
 
 public class Parser{
 

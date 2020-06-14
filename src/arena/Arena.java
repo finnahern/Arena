@@ -1,15 +1,20 @@
+package arena;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+import arena.model.Character;
+import arena.utils.*;
 
 public class Arena{
+	
+	//DataManager dataManager = new DataManager();
 	
 	public void arena(){
 		
 		Parser parser = new Parser();
-		DataManager dataManager = new DataManager();
 		String fileName = "data.txt";
 	
-		ArrayList<String> characterData = dataManager.readData(fileName);
+		ArrayList<String> characterData = DataManager.readData(fileName);
 		ArrayList<Character> characters = parser.init(characterData);
 		
 		characterSelect(characters);
@@ -113,7 +118,9 @@ public class Arena{
 			
 			if(hp2 <= 0){
 				
-				System.out.println(name2 + " is defeated! " + name1 + " wins!");
+				String result = name2 + " is defeated! " + name1 + " wins!";
+				System.out.println(result);
+				DataManager.writeData(result);
 				break;
 			}	
 			
@@ -136,9 +143,33 @@ public class Arena{
 			
 			if(hp1 <= 0){
 				
-				System.out.println(name1 + " is defeated! " + name2 + " wins!");
+				String result = name1 + " is defeated! " + name2 + " wins!";
+				System.out.println(result);
+				DataManager.writeData(result);
 				break;
 			}	
 		}
+		rerun();
 	}	
+	
+	public void rerun(){
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Would you like to run another fight? Y/N");
+		String input = scanner.nextLine();
+		
+		if(input.equals("Y") || input.equals("y")){
+			
+			arena();
+		
+		} else if(input.equals("N") || input.equals("n")){
+			
+			System.exit(0);
+		
+		}else{
+			
+			System.out.println("Input must be Y or N.");
+			rerun();
+		}
+	}
 }
